@@ -37,7 +37,11 @@ const DUMMY_EXP = [
 
 router.get("/:eid", (req, res, next) => {
 	const experienceId = req.params.eid; //eid is whatever enter in the path
-	res.json({ message: DUMMY_EXP });
+	const exp = DUMMY_EXP.find((p) => {
+		return p.id == experienceId;
+	});
+
+	res.json({ exp: exp });
 });
 
 module.exports = router;
