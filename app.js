@@ -7,7 +7,7 @@ const PORT = 5000;
 
 const app = express();
 
-app.use(experienceRoutes);
+app.use("/api/experience", experienceRoutes);
 
 app.listen(PORT, () => {
 	console.log("==========Listening on Port", PORT, "=================");
